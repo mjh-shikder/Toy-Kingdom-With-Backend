@@ -1,0 +1,74 @@
+[
+  {
+    "toyId": 35,
+    "toyName": "Sensory Swing",
+    "sellerName": "Calm Kids",
+    "sellerEmail": "swing@calmkids.com",
+    "price": 89.99,
+    "rating": 4.9,
+    "availableQuantity": 25,
+    "description": "Therapeutic indoor swing for sensory input and relaxation.",
+    "pictureURL": "https://images.unsplash.com/photo-1637063868743-71757b4770c3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Sensory Toys"
+  },
+  {
+    "toyId": 36,
+    "toyName": "Superhero Cape Set",
+    "sellerName": "Hero Gear",
+    "sellerEmail": "cape@herogear.com",
+    "price": 29.99,
+    "rating": 4.8,
+    "availableQuantity": 100,
+    "description": "Reversible superhero capes and masks for imaginative play.",
+    "pictureURL": "https://images.unsplash.com/photo-1651574458535-c1de765c296f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Dress Up"
+  },
+  {
+    "toyId": 37,
+    "toyName": "Magnetic Lego Car",
+    "sellerName": "Doodle Fun",
+    "sellerEmail": "draw@doodlefun.com",
+    "price": 24.99,
+    "rating": 4.7,
+    "availableQuantity": 150,
+    "description": "Colorful magnetic Lego car special addition. Purple, white, and red color combina",
+    "pictureURL": "https://images.unsplash.com/photo-1603215642805-61e87a5f10bc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Arts & Crafts"
+  },
+  {
+    "toyId": 38,
+    "toyName": "Robot Building Kit",
+    "sellerName": "Tech Toys",
+    "sellerEmail": "robot@techtoys.com",
+    "price": 79.99,
+    "rating": 4.6,
+    "availableQuantity": 35,
+    "description": "Build and program your own robot with 400+ pieces.",
+    "pictureURL": "https://images.unsplash.com/photo-1649232738453-8cd62ff4aa6e?q=80&w=1180&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "STEM Toys"
+  },
+  {
+    "toyId": 39,
+    "toyName": "Yellow Lego Car set",
+    "sellerName": "Big Hugs",
+    "sellerEmail": "huge@bighugs.com",
+    "price": 149.99,
+    "rating": 4.9,
+    "availableQuantity": 20,
+    "description": "Life-size soft teddy bear, perfect gift for any child.",
+    "pictureURL": "https://images.unsplash.com/photo-1610213881011-ba006d40d5b4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Soft Toys"
+  },
+  {
+    "toyId": 40,
+    "toyName": "Balance Bike",
+    "sellerName": "Little Riders",
+    "sellerEmail": "ride@littleriders.com",
+    "price": 89.99,
+    "rating": 4.8,
+    "availableQuantity": 60,
+    "description": "No-pedal training bike to teach balance and coordination.",
+    "pictureURL": "https://images.unsplash.com/photo-1591020270735-d4fc1a514a7d?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Ride-on Toys"
+  }
+]

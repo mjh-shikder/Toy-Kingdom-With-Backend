@@ -1,0 +1,74 @@
+[
+     {
+    "toyId": 29,
+    "toyName": "Wooden Blocks 100pcs",
+    "sellerName": "Natural Play",
+    "sellerEmail": "wood@naturalplay.com",
+    "price": 39.99,
+    "rating": 4.9,
+    "availableQuantity": 60,
+    "description": "Natural wooden building blocks in various shapes and sizes.",
+    "pictureURL": "https://images.unsplash.com/photo-1617275457272-51d5a17b8e82?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Wooden Toys"
+  },
+  {
+    "toyId": 30,
+    "toyName": "Minecraft Creeper Plush",
+    "sellerName": "Pixel Toys",
+    "sellerEmail": "mine@pixeltoys.com",
+    "price": 26.99,
+    "rating": 4.7,
+    "availableQuantity": 120,
+    "description": "Official soft and cuddly Creeper plush from Minecraft.",
+    "pictureURL": "https://images.unsplash.com/photo-1591506317034-7169164238a7?q=80&w=1147&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Soft Toys"
+  },
+  {
+    "toyId": 31,
+    "toyName": "Science Experiment Kit",
+    "sellerName": "Little Scientist",
+    "sellerEmail": "lab@littlescientist.com",
+    "price": 49.99,
+    "rating": 4.8,
+    "availableQuantity": 45,
+    "description": "100+ safe and exciting STEM experiments for kids.",
+    "pictureURL": "https://images.unsplash.com/photo-1725297951080-47e72ef3f788?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Educational"
+  },
+  {
+    "toyId": 32,
+    "toyName": "Trampoline 8ft",
+    "sellerName": "Jump High",
+    "sellerEmail": "bounce@jumphigh.com",
+    "price": 249.99,
+    "rating": 4.6,
+    "availableQuantity": 10,
+    "description": "Safe outdoor trampoline with safety net enclosure.",
+    "pictureURL": "https://images.unsplash.com/photo-1609811645795-f72ea07f47e9?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Outdoor Play"
+  },
+  {
+    "toyId": 33,
+    "toyName": "Fingerlings Monkey",
+    "sellerName": "Interactive Pets",
+    "sellerEmail": "pet@interactivepets.com",
+    "price": 19.99,
+    "rating": 4.5,
+    "availableQuantity": 200,
+    "description": "Interactive toy monkey that responds to touch and sound.",
+    "pictureURL": "https://images.unsplash.com/photo-1603296806553-5af152324d2f?q=80&w=1643&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Interactive Toys"
+  },
+  {
+    "toyId": 34,
+    "toyName": "Play Tent Castle",
+    "sellerName": "Dream Castles",
+    "sellerEmail": "castle@dreamcastles.com",
+    "price": 59.99,
+    "rating": 4.7,
+    "availableQuantity": 50,
+    "description": "Pop-up princess castle tent for indoor/outdoor play.",
+    "pictureURL": "https://images.unsplash.com/photo-1585301469986-b0fd8882de39?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "subCategory": "Pretend Play"
+  }
+]
