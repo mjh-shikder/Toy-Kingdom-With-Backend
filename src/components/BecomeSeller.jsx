@@ -1,28 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Aos from "aos";
-import 'aos/dist/aos.css'
+import "aos/dist/aos.css";
 
-
-// handle become a seller btn
 const BecomeSeller = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  //   console.log(isOpen);
+
+  const handleOpenForm = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Apply now 
   const handleApply = (e) => {
     e.preventDefault();
     toast("Submit Done");
 
-    e.target.name.value = "";
-    e.target.email.value = "";
-    };
-    
-    // Aos fucntion
-    useEffect(() => {
-        Aos.init();
-    },[])
+    const form = e.target;
+
+
+    // e.target.name.value = "";
+    // e.target.email.value = "";
+  };
+
+  // Aos fucntion
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   return (
-    <div data-aos="zoom-in"
-     data-aos-easing="linear"
-    >
+    <div data-aos="zoom-in" data-aos-easing="linear">
       <title>Toy Kingdom - Become a Seller</title>
       <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-lg space-y-6 my-5">
         <h2 className="text-3xl font-bold text-center text-accent">
@@ -36,7 +43,7 @@ const BecomeSeller = () => {
         </p>
 
         <div data-aos="fade-left" className="grid md:grid-cols-3 gap-6 mt-6">
-          <div className="p-5 rounded-xl border">
+          <div className="p-5 rounded-xl border border-gray-400 ">
             <h3 className="font-semibold text-lg mb-2 text-accent ">
               📦 List Your Products
             </h3>
@@ -46,7 +53,7 @@ const BecomeSeller = () => {
             </p>
           </div>
 
-          <div className="p-5 rounded-xl border">
+          <div className="p-5 rounded-xl border border-gray-400">
             <h3 className="font-semibold text-lg mb-2 text-accent">
               🚚 Fast Delivery Support
             </h3>
@@ -56,8 +63,10 @@ const BecomeSeller = () => {
             </p>
           </div>
 
-          <div className="p-5 rounded-xl border">
-            <h3 className="font-semibold text-lg mb-2 text-accent">💳 Secure Payments</h3>
+          <div className="p-5 rounded-xl border border-gray-400">
+            <h3 className="font-semibold text-lg mb-2 text-accent">
+              💳 Secure Payments
+            </h3>
             <p className="text-gray-600">
               Receive payments directly to your preferred method on time — 100%
               guaranteed.
@@ -65,7 +74,10 @@ const BecomeSeller = () => {
           </div>
         </div>
 
-        <div data-aos="fade-right" className="mt-8 bg-base-200 border border-secondary p-6 rounded-xl">
+        <div
+          data-aos="fade-right"
+          className="mt-8 bg-base-200 border border-secondary p-6 rounded-xl"
+        >
           <h3 className="font-semibold text-xl text-secondary mb-2">
             Why Sell With Us?
           </h3>
@@ -77,41 +89,110 @@ const BecomeSeller = () => {
           </ul>
         </div>
 
-        <div data-aos="fade-up" className="text-center mt-6">
-          <form
-            onSubmit={handleApply}
-            className="bg-base-200 p-5 rounded-xl mt-5"
-          >
-            <fieldset className="fieldset ">
-              {/* Email Feild */}
-              <label className="label">Name</label>
+        {/* apply now */}
+        <div className="flex items-center justify-center">
+          <button onClick={handleOpenForm} className="btn btn-primary ">Apply Now</button>
+        </div>
+
+        {
+          isOpen ? <div data-aos="zoom-in" className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8 mt-10">
+          <h2 className="text-3xl font-bold text-center text-secondary mb-6">
+            Seller Form
+          </h2>
+
+          <form onSubmit={handleApply} className="space-y-6">
+            {/* Seller Name */}
+            <div>
+              <label className="block mb-2 font-semibold">Full Name</label>
               <input
                 type="text"
-                className="input rounded-xl w-full"
-                name="name"
-                placeholder="Name"
-                required
+                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+                  placeholder="Enter your full name"
+                  name="name"
               />
-              {/* Password Feild */}
-              <label className="label">Email</label>
+            </div>
+
+            {/* Shop Name */}
+            <div>
+              <label className="block mb-2 font-semibold">Shop Name</label>
+              <input
+                type="text"
+                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+                  placeholder="Enter your shop name"
+                  name="shopName"
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block mb-2 font-semibold">Email</label>
               <input
                 type="email"
-                className="input rounded-xl w-full"
-                name="email"
-                placeholder="Email"
-                required
+                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+                  placeholder="Enter your email"
+                  name="email"
               />
+            </div>
 
-              <button className="btn  btn-secondary  mt-4 rounded-xl">
-                Apply Now
-              </button>
-            </fieldset>
+            {/* Phone */}
+            <div>
+              <label className="block mb-2 font-semibold">Phone Number</label>
+              <input
+                type="text"
+                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+                  placeholder="Enter your phone number"
+                  name="phone"
+              />
+            </div>
+
+            {/* Shop Type */}
+            <div>
+              <label className="block mb-2 font-semibold">Shop Category</label>
+              <select className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary">
+                <option>Select a category</option>
+                <option>Kids Toys</option>
+                <option>Educational Toys</option>
+                <option>Indoor Games</option>
+                <option>Outdoor Games</option>
+                <option>Baby Products</option>
+              </select>
+              </div>
+              
+              {/* Photo URL */}
+            <div>
+              <label className="block mb-2 font-semibold">Photo URL</label>
+              <input
+                type="text"
+                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+                  placeholder="Enter your phone number"
+                  name="photoURL"
+              />
+            </div>
+
+            {/* Description */}
+            <div>
+              <label className="block mb-2 font-semibold">
+                Shop Description
+              </label>
+              <textarea
+                rows="4"
+                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+                  placeholder="Describe your shop and products"
+                  name="description"
+              ></textarea>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              
+              className="btn-primary btn w-full  text-white p-3 rounded-lg text-lg font-semibold "
+            >
+              Submit Application
+            </button>
           </form>
-
-          <p className="text-gray-500 mt-2 text-sm">
-            We’ll review your application and contact you within 24 hours.
-          </p>
-        </div>
+        </div> :''
+        }
+        
       </div>
     </div>
   );
