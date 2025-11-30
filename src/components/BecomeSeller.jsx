@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
 
 const BecomeSeller = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,17 +12,42 @@ const BecomeSeller = () => {
     setIsOpen(!isOpen);
   };
 
-  // Apply now 
+  // Apply now
   const handleApply = (e) => {
     e.preventDefault();
     toast("Submit Done");
 
     const form = e.target;
 
+    const name = form.name.value;
+    const shopName = form.shopName.value;
+    const category = form.category.value;
+    const phone = form.phone.value;
+    const photoURL = form.photoURL.value;
+    const email = form.email.value;
+    const description = form.description.value;
 
-    // e.target.name.value = "";
-    // e.target.email.value = "";
+    const formData = {
+      name,
+      shopName,
+      category,
+      phone,
+      photoURL,
+      email,
+      description
+    };
+
+    console.log("full form", { formData });
+
+    axios.post('http://localhost:3000/contributors', formData)
+      .then(res => {
+      console.log(res);
+    })
+      
+
   };
+  
+
 
   // Aos fucntion
   useEffect(() => {
@@ -91,108 +117,116 @@ const BecomeSeller = () => {
 
         {/* apply now */}
         <div className="flex items-center justify-center">
-          <button onClick={handleOpenForm} className="btn btn-primary ">Apply Now</button>
+          <button onClick={handleOpenForm} className="btn btn-primary ">
+            Apply Now
+          </button>
         </div>
 
-        {
-          isOpen ? <div data-aos="zoom-in" className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8 mt-10">
-          <h2 className="text-3xl font-bold text-center text-secondary mb-6">
-            Seller Form
-          </h2>
+        {isOpen ? (
+          <div
+            data-aos="zoom-in"
+            className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8 mt-10"
+          >
+            <h2 className="text-3xl font-bold text-center text-secondary mb-6">
+              Seller Form
+            </h2>
 
-          <form onSubmit={handleApply} className="space-y-6">
-            {/* Seller Name */}
-            <div>
-              <label className="block mb-2 font-semibold">Full Name</label>
-              <input
-                type="text"
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+            <form onSubmit={handleApply} className="space-y-6">
+              {/* Seller Name */}
+              <div>
+                <label className="block mb-2 font-semibold">Full Name</label>
+                <input
+                  type="text"
+                  className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
                   placeholder="Enter your full name"
                   name="name"
-              />
-            </div>
+                />
+              </div>
 
-            {/* Shop Name */}
-            <div>
-              <label className="block mb-2 font-semibold">Shop Name</label>
-              <input
-                type="text"
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+              {/* Shop Name */}
+              <div>
+                <label className="block mb-2 font-semibold">Shop Name</label>
+                <input
+                  type="text"
+                  className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
                   placeholder="Enter your shop name"
                   name="shopName"
-              />
-            </div>
+                />
+              </div>
 
-            {/* Email */}
-            <div>
-              <label className="block mb-2 font-semibold">Email</label>
-              <input
-                type="email"
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+              {/* Email */}
+              <div>
+                <label className="block mb-2 font-semibold">Email</label>
+                <input
+                  type="email"
+                  className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
                   placeholder="Enter your email"
                   name="email"
-              />
-            </div>
+                />
+              </div>
 
-            {/* Phone */}
-            <div>
-              <label className="block mb-2 font-semibold">Phone Number</label>
-              <input
-                type="text"
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+              {/* Phone */}
+              <div>
+                <label className="block mb-2 font-semibold">Phone Number</label>
+                <input
+                  type="text"
+                  className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
                   placeholder="Enter your phone number"
                   name="phone"
-              />
-            </div>
-
-            {/* Shop Type */}
-            <div>
-              <label className="block mb-2 font-semibold">Shop Category</label>
-              <select className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary">
-                <option>Select a category</option>
-                <option>Kids Toys</option>
-                <option>Educational Toys</option>
-                <option>Indoor Games</option>
-                <option>Outdoor Games</option>
-                <option>Baby Products</option>
-              </select>
+                />
               </div>
-              
+
+              {/* Shop Type */}
+              <div>
+                <label className="block mb-2 font-semibold">
+                  Shop Category
+                </label>
+                <select
+                  name="category"
+                  className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+                >
+                  <option>Select a category</option>
+                  <option>Kids Toys</option>
+                  <option>Educational Toys</option>
+                  <option>Indoor Games</option>
+                  <option>Outdoor Games</option>
+                  <option>Baby Products</option>
+                </select>
+              </div>
+
               {/* Photo URL */}
-            <div>
-              <label className="block mb-2 font-semibold">Photo URL</label>
-              <input
-                type="text"
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+              <div>
+                <label className="block mb-2 font-semibold">Photo URL</label>
+                <input
+                  type="text"
+                  className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
                   placeholder="Enter your phone number"
                   name="photoURL"
-              />
-            </div>
+                />
+              </div>
 
-            {/* Description */}
-            <div>
-              <label className="block mb-2 font-semibold">
-                Shop Description
-              </label>
-              <textarea
-                rows="4"
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
+              {/* Description */}
+              <div>
+                <label className="block mb-2 font-semibold">
+                  Shop Description
+                </label>
+                <textarea
+                  rows="4"
+                  className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-secondary"
                   placeholder="Describe your shop and products"
                   name="description"
-              ></textarea>
-            </div>
+                ></textarea>
+              </div>
 
-            {/* Submit Button */}
-            <button
-              
-              className="btn-primary btn w-full  text-white p-3 rounded-lg text-lg font-semibold "
-            >
-              Submit Application
-            </button>
-          </form>
-        </div> :''
-        }
-        
+              {/* Submit Button */}
+              <button className="btn-primary btn w-full  text-white p-3 rounded-lg text-lg font-semibold ">
+                Submit Application
+              </button>
+            </form>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
