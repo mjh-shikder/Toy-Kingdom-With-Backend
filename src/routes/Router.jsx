@@ -11,6 +11,7 @@ import Registration from "../components/Pages/Registration";
 import PrivateRoute from "./PrivateRoute";
 import BecomeSeller from "../components/BecomeSeller";
 import ForgetPassword from "../components/Pages/ForgetPassword";
+import SellerRequest from "../components/Pages/SellerRequest";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
         element: <ForgetPassword></ForgetPassword>,
         hydrateFallbackElement: <Loading></Loading>,
       },
+      {
+        path: '/seller-request',
+        element: <SellerRequest></SellerRequest>,
+        hydrateFallbackElement:<Loading></Loading>,
+      }
       // {
       //   path: "/card-details/:id",
       //   element: <DetailsCard></DetailsCard>,

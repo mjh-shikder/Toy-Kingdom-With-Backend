@@ -62,6 +62,9 @@ const Navbar = () => {
           My Profile
         </NavLink>{" "}
       </li>
+      <li>
+
+     
       {user && <NavLink
           to={"/contribute"}
           className={({ isActive }) =>
@@ -71,7 +74,22 @@ const Navbar = () => {
           }
         >
           Become a Seller
-        </NavLink> }
+        </NavLink>}
+      </li>
+      <li>
+
+     
+      {user && <NavLink
+          to={"/seller-request"}
+          className={({ isActive }) =>
+            isActive
+              ? "bg-primary text-white px-2.5 py-0.5 rounded-lg font-semibold  "
+              : "text-secondary font-semibold"
+          }
+        >
+          Seller Request
+        </NavLink>}
+      </li>
     </>
   );
   return (
